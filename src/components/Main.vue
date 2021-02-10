@@ -72,7 +72,7 @@ export default {
       const apiKey = 'b77b5110977542929e989d6d049e222d';
 
       const response = await axios.get(
-        `http://newsapi.org/v2/top-headlines?country=${this.apiLang}&category=entertainment&pageSize=100&apiKey=${apiKey}`
+        `https://newsapi.org/v2/top-headlines?country=${this.apiLang}&category=entertainment&pageSize=100&apiKey=${apiKey}`
       );
 
       this.control.loading = false;
