@@ -1,26 +1,34 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Header />
+  <Main />
+  <BackToTop />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from '@/components/Header';
+import Main from '@/components/Main';
+import BackToTop from '@/components/BackToTop';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    Header,
+    Main,
+    BackToTop,
+  },
+
+  created() {
+    let locale = localStorage.getItem('locale');
+    let apiLang = localStorage.getItem('apiLang') ?? 'us';
+    const theme = localStorage.getItem('theme');
+
+    this.$i18n.setLocale(locale);
+    localStorage.setItem('apiLang', apiLang);
+    document.documentElement.setAttribute('data-theme', theme);
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+@import '@/assets/scss/main.scss';
 </style>

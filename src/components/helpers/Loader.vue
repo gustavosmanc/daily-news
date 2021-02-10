@@ -1,0 +1,77 @@
+<template>
+  <div class="wrapper">
+    <div class="spinner">
+      <div class="ball"></div>
+      <p>{{ $t('loading').toUpperCase() }}...</p>
+    </div>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+
+  .spinner {
+    width: 100px;
+    height: 50px;
+
+    .ball {
+      width: 20px;
+      height: 20px;
+      background-color: var(--loader-color);
+      border-radius: 50%;
+      display: inline-block;
+      -webkit-animation: motion 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+      animation: motion 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+    }
+  }
+
+  p {
+    color: var(--loader-color);
+    margin-top: 5px;
+    font-family: sans-serif;
+    letter-spacing: 3px;
+    font-size: 10px;
+  }
+
+  @-webkit-keyframes motion {
+    0% {
+      transform: translateX(0) scale(1);
+    }
+    25% {
+      transform: translateX(-50px) scale(0.3);
+    }
+    50% {
+      transform: translateX(0) scale(1);
+    }
+    75% {
+      transform: translateX(50px) scale(0.3);
+    }
+    100% {
+      transform: translateX(0) scale(1);
+    }
+  }
+
+  @keyframes motion {
+    0% {
+      transform: translateX(0) scale(1);
+    }
+    25% {
+      transform: translateX(-50px) scale(0.3);
+    }
+    50% {
+      transform: translateX(0) scale(1);
+    }
+    75% {
+      transform: translateX(50px) scale(0.3);
+    }
+    100% {
+      transform: translateX(0) scale(1);
+    }
+  }
+}
+</style>

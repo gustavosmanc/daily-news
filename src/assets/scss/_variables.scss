@@ -1,0 +1,28 @@
+:root {
+  --primary-background-color: #151618;
+  --secondary-background-color: #25282c;
+  --primary-text-color: #fff;
+  --published-text-color: #686e78;
+  --header-separator-color: rgba(244, 245, 246, 0.12);
+  --border-color: rgba(233, 234, 236, 0.08);
+  --border-color-hover: hsla(0, 0%, 100%, 0.12);
+  --box-shadow: rgb(0 0 0 / 24%);
+  --box-shadow-hover: rgb(0 0 0 / 48%);
+  --loader-color: #9061f9;
+  --theme-button-background-color: #9061f9;
+  --theme-button-icon-color: #fff;
+}
+
+[data-theme='lightTheme'] {
+  --primary-background-color: #e9eaec;
+  --secondary-background-color: #fff;
+  --primary-text-color: #151618;
+  --published-text-color: #a9abb3;
+  --header-separator-color: rgba(21, 22, 24, 0.16);
+  --border-color: rgba(37, 40, 44, 0.04);
+  --border-color-hover: rgba(21, 22, 24, 0.08);
+  --box-shadow: rgb(0 0 0 / 8%);
+  --box-shadow-hover: rgb(0 0 0 / 16%);
+  --theme-button-background-color: rgba(144, 97, 249, 0.2);
+  --theme-button-icon-color: #9061f9;
+}
