@@ -52,13 +52,13 @@ export default {
     formatDate(date) {
       const locale = localStorage.getItem('locale');
 
-      const year = new Intl.DateTimeFormat('locale', { year: 'numeric' }).format(date);
+      const year = new Intl.DateTimeFormat(locale, { year: 'numeric' }).format(date);
 
-      const unformattedMonth = new Intl.DateTimeFormat('locale', { month: 'short' }).format(date).substring(0, 3);
+      const unformattedMonth = new Intl.DateTimeFormat(locale, { month: 'short' }).format(date).substring(0, 3);
 
       const month = unformattedMonth.charAt(0).toUpperCase() + unformattedMonth.slice(1);
 
-      const day = new Intl.DateTimeFormat('locale', { day: '2-digit' }).format(date);
+      const day = new Intl.DateTimeFormat(locale, { day: '2-digit' }).format(date);
 
       if (locale === 'pt-br') {
         return `${day} ${month}, ${year}`;
